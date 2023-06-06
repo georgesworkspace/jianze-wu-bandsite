@@ -1,1 +1,286 @@
-@use"partials/variables.scss" as *;
+@use "partials/variables" as *;
+@use "partials/typography" as *;
+
+@mixin tablet {
+  @media (min-width: $tablet-break-point) {
+    @content;
+  }
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+//navigation bar//
+.nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #323232;
+
+  @include tablet {
+    flex-direction: row;
+    padding: 0 2rem;
+  }
+
+  &__list {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    background-color: #323232;
+    padding: 0;
+    margin: 0;
+
+    @include tablet {
+      justify-content: initial;
+      width: auto;
+      padding-left: 3rem;
+    }
+  }
+  &__title {
+    padding-top: 2vh;
+    color: white;
+    width: 50%;
+
+    @include tablet {
+      padding: 0;
+      width: 13rem;
+    }
+  }
+  &__item {
+    font-family: Avenir Regular;
+    font-weight: 400;
+    flex: 1;
+    text-align: center;
+    background-color: #323232;
+    padding: 2rem 0;
+    color: #afafaf;
+    font-size: 1.5rem;
+
+    &--selected {
+      border-bottom: 0.2rem solid white;
+      color: white;
+      font-weight: 600;
+    }
+
+    @include tablet {
+      flex: 0;
+      margin-left: 5rem;
+    }
+  }
+}
+
+
+//header section//
+.header {
+  display: flex;
+  &__picture {
+    width: 100%;
+    filter: brightness(60%);
+  }
+  &__text {
+    position: absolute;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 600;
+    padding-top: 11vh;
+    padding-left: 5vh;
+    @include tablet{
+      top:45%;
+      right:60%;
+      font-size:2.5rem;
+    
+      
+    }
+  }
+}
+//main section//
+.description {
+  padding: 3vw;
+  @include tablet{
+    line-height: 22px;
+  }
+  &__title {
+    margin: 0;
+    font-weight: 600;
+    font-size: 2rem;
+    font-family: Avenir demi;
+    font-weight: 400;
+    color: #323232;
+  }
+  &__picture {
+    max-width: 100%;
+  }
+  &__main-content--demi {
+    font-size: 0.9rem;
+    line-height: 22px;
+    color: #323232;
+    font-family: Avenir demi;
+    font-weight:400;
+  }
+  &__main-content--title {
+    font-size: 1.2rem;
+    color: black;
+    padding:4vh 0;
+    font-family: Avenir regular;
+  }
+  &__main-content {
+    font-family: Avenir regular;
+    color: #323232;
+    font-size: 0.85rem;
+    line-height: 18px;
+    padding-bottom: 5vh;
+   @include tablet{
+    padding:0 2vw;
+    display:flex;
+   }
+  }
+}
+  .main-content{
+  @include tablet{
+   display:flex;
+padding:3vw 0;
+line-height: 22px;
+  }
+}
+.gallery {
+  background-color: #fafafa;
+  padding: 3vw;
+  @include tablet{
+max-width:100%;
+  }
+  &__title {
+    font-family: Avenir demi;
+    font-size: 2.5rem;
+    margin: 0;
+    margin-bottom: 4vh;
+    color: #323232;
+    
+  }
+  &__image {
+    width: 100%;
+    margin-bottom: 2vh;
+    @include tablet{
+      display:inline-block;
+      width:29%;
+      margin-left:3vw;
+    }
+  }
+}
+.footer {
+  background-color: #323232;
+  width: 100%;
+  color: white;
+  line-height: 18px;
+  padding-left:5vw;
+  
+  &__fb {
+    margin-right: 15vw;
+    height: 8vh;
+    @include tablet{
+      display:flex;
+      height:auto;
+      margin-right: 5vw;
+    }
+  }
+  &__ins {
+    margin-right: 15vw;
+    height: 8vh;
+    @include tablet{
+      display:flex;
+      height:auto;
+      margin-right: 5vw;
+    }
+  }
+  &__twi {
+    height: 8vh;
+    @include tablet{
+      display:flex;
+      height:auto;
+      margin-right: 5vw;
+    }
+  }
+  &__social-media{
+    @include tablet{
+display:flex;
+height:auto;
+justify-content: space-evenly;
+text-align: start;
+padding-top:10vh;
+    }
+  }
+  &__contact {
+    font-size: 1.5rem;
+
+    font-family: Avenir demi;
+    
+    
+  
+  }
+&__main{
+  @include tablet{
+    display:flex;
+    justify-content: space-between;
+    
+  }
+}
+  &__content {
+    font-size: 1rem;
+    font-family: Avenir regular;
+  }
+  &__content--bold {
+    font-size: 1rem;
+    font-family: Avenir demi;
+    font-weight: 600;
+   padding:5vh 0;
+   @include tablet{
+    padding:0;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+   }
+  }
+  &__bandname {
+    padding-top: 15vh;
+    padding-bottom:3vh;
+    @include tablet{
+      padding:0
+      
+     }
+  }
+  &__manage{
+    @include tablet{
+      padding:0;
+      display:flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+     }
+  }
+  &__booking{
+    @include tablet{
+      padding:0;
+      display:flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+     }
+  }
+  &__entertainment{
+    @include tablet{
+      padding:0;
+      display:flex;
+    flex-direction: column;
+      justify-content: space-evenly;
+     }
+  }
+}
+
+.copyright {
+  font-family: Avenir regular;
+  font-size: 0.9rem;
+  padding-bottom: 5vh;
+}
