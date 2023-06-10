@@ -44,16 +44,20 @@
     padding-left: 3rem;
   }
 }
-.nav__title {
+.nav__hyperlink {
   padding-top: 2vh;
   color: white;
   width: 50%;
 }
 @media (min-width: 768px) {
-  .nav__title {
+  .nav__hyperlink {
     padding: 0;
     width: 13rem;
   }
+}
+.nav__title {
+  width: 100%;
+  height: auto;
 }
 .nav__item {
   font-family: Avenir Regular;
@@ -182,6 +186,15 @@
   }
 }
 
+.form__image {
+  width: 10%;
+  border-radius: 50%;
+}
+
+.comment__image {
+  width: 10%;
+}
+
 .footer {
   background-color: #323232;
   width: 100%;
@@ -296,4 +309,4 @@
   font-family: Avenir regular;
   font-size: 0.9rem;
   padding-bottom: 5vh;
-}/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=bio.css.map */

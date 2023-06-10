@@ -1,0 +1,205 @@
+@font-face {
+  font-family: Avenir bold;
+  src: url(../assets/Font/AvenirNextLTPro-Bold.otf);
+}
+@font-face {
+  font-family: Avenir Demi;
+  src: url(../assets/Font/AvenirNextLTPro-Demi.otf);
+}
+@font-face {
+  font-family: Avenir Regular;
+  src: url(../assets/Font/AvenirNextLTPro-Regular.otf);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #323232;
+}
+@media (min-width: 768px) {
+  .nav {
+    flex-direction: row;
+    padding: 0 2rem;
+  }
+}
+.nav__list {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  background-color: #323232;
+  padding: 0;
+  margin: 0;
+}
+@media (min-width: 768px) {
+  .nav__list {
+    justify-content: initial;
+    width: auto;
+    padding-left: 3rem;
+  }
+}
+.nav__hyperlink {
+  padding-top: 2vh;
+  color: white;
+  width: 50%;
+}
+@media (min-width: 768px) {
+  .nav__hyperlink {
+    padding: 0;
+    width: 13rem;
+  }
+}
+.nav__title {
+  width: 100%;
+  height: auto;
+}
+.nav__item {
+  font-family: Avenir Regular;
+  font-weight: 400;
+  flex: 1;
+  text-align: center;
+  background-color: #323232;
+  padding: 2rem 0;
+  color: #afafaf;
+  font-size: 1.5rem;
+}
+.nav__item--selected {
+  border-bottom: 0.2rem solid white;
+  color: white;
+  font-weight: 600;
+}
+@media (min-width: 768px) {
+  .nav__item {
+    flex: 0;
+    margin-left: 5rem;
+  }
+}
+
+.main__section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 50vh;
+}
+
+.footer {
+  background-color: #323232;
+  width: 100%;
+  color: white;
+  line-height: 18px;
+  padding-left: 5vw;
+}
+.footer__fb {
+  margin-right: 15vw;
+  height: 8vh;
+}
+@media (min-width: 768px) {
+  .footer__fb {
+    display: flex;
+    height: auto;
+    margin-right: 5vw;
+  }
+}
+.footer__ins {
+  margin-right: 15vw;
+  height: 8vh;
+}
+@media (min-width: 768px) {
+  .footer__ins {
+    display: flex;
+    height: auto;
+    margin-right: 5vw;
+  }
+}
+.footer__twi {
+  height: 8vh;
+}
+@media (min-width: 768px) {
+  .footer__twi {
+    display: flex;
+    height: auto;
+    margin-right: 5vw;
+  }
+}
+@media (min-width: 768px) {
+  .footer__social-media {
+    display: flex;
+    height: auto;
+    justify-content: space-evenly;
+    text-align: start;
+    padding-top: 10vh;
+  }
+}
+.footer__contact {
+  font-size: 1.5rem;
+  font-family: Avenir demi;
+}
+@media (min-width: 768px) {
+  .footer__main {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.footer__content {
+  font-size: 1rem;
+  font-family: Avenir regular;
+}
+.footer__content--bold {
+  font-size: 1rem;
+  font-family: Avenir demi;
+  font-weight: 600;
+  padding: 5vh 0;
+}
+@media (min-width: 768px) {
+  .footer__content--bold {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+}
+.footer__bandname {
+  padding-top: 15vh;
+  padding-bottom: 3vh;
+}
+@media (min-width: 768px) {
+  .footer__bandname {
+    padding: 0;
+  }
+}
+@media (min-width: 768px) {
+  .footer__manage {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+}
+@media (min-width: 768px) {
+  .footer__booking {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+}
+@media (min-width: 768px) {
+  .footer__entertainment {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+}
+
+.copyright {
+  font-family: Avenir regular;
+  font-size: 0.9rem;
+  padding-bottom: 5vh;
+}/*# sourceMappingURL=shows.css.map */
