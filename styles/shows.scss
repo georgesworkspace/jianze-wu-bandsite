@@ -6,12 +6,17 @@
     @content;
   }
 }
+@mixin desktop{
+  @media(min-width:$desktop-break-point){
+    @content;
+  }
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 0; 
+  padding: 0;
 }
-
 
 
 
@@ -26,7 +31,9 @@
     flex-direction: row;
     padding: 0 2rem;
   }
-
+  @include desktop{
+    padding-left:13vw;
+  }
   &__list {
     width: 100%;
     display: flex;
@@ -42,7 +49,8 @@
       padding-left: 3rem;
     }
   }
-  &__hyperlink{
+
+  &__hyperlink {
     padding-top: 2vh;
     color: white;
     width: 50%;
@@ -52,10 +60,12 @@
       width: 13rem;
     }
   }
-  &__title{
-    width:100%;
-    height:auto;
+
+  &__title {
+    width: 100%;
+    height: auto;
   }
+
   &__item {
     font-family: Avenir Regular;
     font-weight: 400;
@@ -78,120 +88,293 @@
     }
   }
 }
+
+
+//header section//
+.header {
+  display: flex;
+ 
+ 
+ &__song{
+  position: absolute;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 600;
+    padding-top: 11vh;
+    padding-left: 5vh;
+    width:85%;
+    @include tablet {
+      top: 45%;
+      right: 60%;
+      font-size: 2.5rem;
+
+ }
+}
+  &__picture {
+    width: 100%;
+    filter: brightness(60%);
+    
+  }
+
+  &__title {
+    position: absolute;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding-top: 6vh;
+    padding-left: 5vh;
+
+    @include tablet {
+      top: 45%;
+      right: 60%;
+      font-size: 2.5rem;
+
+
+    }
+  }
+}
 .main{
-  &__section{
+  padding-top: 5vh;
+  margin-left:4%;
+  &__title{
+font-family: Avenir demi;
+color:black;
+padding-left:4vw;
+font-size:2rem;
+
+  }
+  &__div--hidden{display:none;
+    @include tablet{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width:65%
+    }
+  }
+  &__show-div{
+    border-bottom:1px solid #afafaf;
     display:flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height:50vh;
+    height:45vh;
+  @include tablet{
+   display:flex;
+   flex-direction: row;
+   height:10vh;
+   justify-content: space-between;
   }
+  }
+  &__date{
+   font-family:Avenir demi;
+   color:#afafaf;
+   font-size: 1rem;
+   @include tablet{
+    display: none;
+   }
+  }
+  &__date--detail{
+    font-family: Avenir demi;
+    font-size:1.1rem;
+  }
+  &__venue--detail{
+    font-family:Avenir regular;
+  }
+  &__venue{
+    font-family:Avenir demi;
+    color:#afafaf;
+    font-size: 1rem;
+    @include tablet{
+      display: none;
+     }
+  }
+  &__location{
+    font-family:Avenir demi;
+    color:#afafaf;
+    font-size: 1rem;
+    @include tablet{
+      display: none;
+     }
+  }
+  &__location--detail{
+    font-family: Avenir regular;
+
+  }
+  &__button{
+    color:white;
+    background: #323232;
+    border:none;
+    border-radius: 4px;
+    width:95%;
+    height:100%;
+    font-family: Avenir demi;
+    font-size: 1.2rem;
+  @include tablet{
+    width:100%;
+  }
+  }
+  &__button-div{
+    height:8vh;
+    @include tablet{width:20vw;
+  }  
+}
+&__date-div{
+@include tablet{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+}
+&__venue-div{
+  @include tablet{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  }
+  &__location-div{
+    @include tablet{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    }
 }
 
-
+//footer section
 .footer {
   background-color: #323232;
   width: 100%;
   color: white;
   line-height: 18px;
-  padding-left:5vw;
-  
+  padding-left: 5vw;
+
   &__fb {
     margin-right: 15vw;
     height: 8vh;
-    @include tablet{
-      display:flex;
-      height:auto;
+
+    @include tablet {
+      display: flex;
+      height: auto;
       margin-right: 5vw;
     }
   }
+
   &__ins {
     margin-right: 15vw;
     height: 8vh;
-    @include tablet{
-      display:flex;
-      height:auto;
+
+    @include tablet {
+      display: flex;
+      height: auto;
       margin-right: 5vw;
     }
   }
+
   &__twi {
     height: 8vh;
-    @include tablet{
-      display:flex;
-      height:auto;
+
+    @include tablet {
+      display: flex;
+      height: auto;
       margin-right: 5vw;
     }
   }
-  &__social-media{
-    @include tablet{
-display:flex;
-height:auto;
-justify-content: space-evenly;
-text-align: start;
-padding-top:10vh;
+  &__apps{
+    display: flex;
+      justify-content: space-between;
+      padding-left:15vw;
+     
+  }
+  &__social-media {
+    @include tablet {
+      display: flex;
+      
+      justify-content: flex-start;
+     width:70%;
+      padding-top: 10vh;
     }
   }
+
   &__contact {
     font-size: 1.5rem;
 
     font-family: Avenir demi;
-    
-    
-  
+    @include tablet{
+      font-size: 2.5rem;
+    }
+
+
+
   }
-&__main{
-  @include tablet{
-    display:flex;
-    justify-content: space-between;
-    
+
+  &__main {
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+      height:30vh;
+    }
   }
-}
+
   &__content {
     font-size: 1rem;
     font-family: Avenir regular;
+    @include tablet{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
   }
+
   &__content--bold {
     font-size: 1rem;
     font-family: Avenir demi;
     font-weight: 600;
-   padding:5vh 0;
-   @include tablet{
-    padding:0;
-    display:flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-   }
+    padding: 5vh 0;
+
+    @include tablet {
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
   }
+
   &__bandname {
-    padding-top: 15vh;
-    padding-bottom:3vh;
-    @include tablet{
-      padding:0
+    
+    @include tablet {
+      width:20%;
+      padding:0;
       
-     }
+      padding-bottom: 15vw;
+    }
   }
-  &__manage{
-    @include tablet{
-      padding:0;
-      display:flex;
+
+  &__manage {
+    @include tablet {
+      padding: 0;
+      display: flex;
       flex-direction: column;
       justify-content: space-evenly;
-     }
+      
+    }
   }
-  &__booking{
-    @include tablet{
-      padding:0;
-      display:flex;
+
+  &__booking {
+    @include tablet {
+      padding: 0;
+      display: flex;
       flex-direction: column;
       justify-content: space-evenly;
-     }
+    }
   }
-  &__entertainment{
-    @include tablet{
-      padding:0;
-      display:flex;
-    flex-direction: column;
+
+  &__entertainment {
+    @include tablet {
+      padding: 0;
+      display: flex;
+      flex-direction: column;
       justify-content: space-evenly;
-     }
+    }
   }
 }
 

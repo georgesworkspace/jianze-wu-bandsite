@@ -26,37 +26,37 @@ const performances=[
     }
 
 ] 
-  
+// select the parent class
+const parentclass=document.querySelector(".main");
+//create a div for tablet and desktop, doesnot display in mobile;
+const hiddendiv=document.createElement("div");
+hiddendiv.className=("main__div--hidden");
+const hiddendate=document.createElement("p");
+hiddendate.className=("main__div-date--hidden");
+hiddendate.innerText=("DATE");
+const hiddenvenue=document.createElement("p")
+hiddenvenue.className=("main__div-venue--hidden");
+hiddenvenue.innerText=("VENUE");
+const hiddenlocation=document.createElement("p");
+hiddenlocation.className=("main__div-location--hidden");
+hiddenlocation.innerText=("LOCATION");
+hiddendiv.appendChild(hiddendate);
+hiddendiv.appendChild(hiddenvenue);
+hiddendiv.appendChild(hiddenlocation);
+parentclass.appendChild(hiddendiv);
 performances.forEach((performance)=>{
     displayshow(performance)
 })
 function displayshow(performance){
 
-    // {
-    //     DATE:"Wed Dec 15 2021",
-    //     VENUE:"Press Club",
-    //     LOCATION:"San Francisco, CA"
-    // }
-//   <div class="main__date-div">
-//     <p class="main__date">DATE</p>
-//     <p class="main__date--detail">Wed Dec 15 2021</p>
-//  </div>
-//  <div>
-//     <p class="main__venue">VENUE</p>
-//     <P class="main__venue--detail">Press Club</P>
-//  </div>
-//  <div>
-//     <P class="main__location">LOCATION</P>
-//     <p class="main__location--detail">San Francisco, CA</p>
-//   </div>
-//     <button class="main__button">BUY TICKETS</button>
-//  
-
+ 
 // select the parent class
 const parentclass=document.querySelector(".main");
+
+
 //create div for first show
-const showOneDivClass=document.createElement("div");
-showOneDivClass.className=("main__show-one-div");
+const showDivClass=document.createElement("div");
+showDivClass.className=("main__show-div");
 // date
 const datedivclass=document.createElement("div");
 datedivclass.className=("main__date-div");
@@ -108,6 +108,16 @@ locationdivclass.appendChild(Location);
 locationdivclass.appendChild(Locationdetail);
 //append to showdiv
 showDivClass.appendChild(locationdivclass);
+//create button div
+const buttonDiv=document.createElement("div");
+buttonDiv.className=("main__button-div")
+//create button
+const button=document.createElement("button");
+button.className=("main__button");
+button.innerText=("BUY TICKETS");   
+//append button to buttondiv
+buttonDiv.appendChild(button);
+showDivClass.appendChild(buttonDiv);
 //append to main
 parentclass.appendChild(showDivClass);
 

@@ -28,6 +28,11 @@
     padding: 0 2rem;
   }
 }
+@media (min-width: 1280px) {
+  .nav {
+    padding-left: 13vw;
+  }
+}
 .nav__list {
   width: 100%;
   display: flex;
@@ -81,11 +86,164 @@
   }
 }
 
-.main__section {
+.header {
+  display: flex;
+}
+.header__song {
+  position: absolute;
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 600;
+  padding-top: 11vh;
+  padding-left: 5vh;
+  width: 85%;
+}
+@media (min-width: 768px) {
+  .header__song {
+    top: 45%;
+    right: 60%;
+    font-size: 2.5rem;
+  }
+}
+.header__picture {
+  width: 100%;
+  filter: brightness(60%);
+}
+.header__title {
+  position: absolute;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding-top: 6vh;
+  padding-left: 5vh;
+}
+@media (min-width: 768px) {
+  .header__title {
+    top: 45%;
+    right: 60%;
+    font-size: 2.5rem;
+  }
+}
+
+.main {
+  padding-top: 5vh;
+  margin-left: 4%;
+}
+.main__title {
+  font-family: Avenir demi;
+  color: black;
+  padding-left: 4vw;
+  font-size: 2rem;
+}
+.main__div--hidden {
+  display: none;
+}
+@media (min-width: 768px) {
+  .main__div--hidden {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 65%;
+  }
+}
+.main__show-div {
+  border-bottom: 1px solid #afafaf;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  height: 50vh;
+  height: 45vh;
+}
+@media (min-width: 768px) {
+  .main__show-div {
+    display: flex;
+    flex-direction: row;
+    height: 10vh;
+    justify-content: space-between;
+  }
+}
+.main__date {
+  font-family: Avenir demi;
+  color: #afafaf;
+  font-size: 1rem;
+}
+@media (min-width: 768px) {
+  .main__date {
+    display: none;
+  }
+}
+.main__date--detail {
+  font-family: Avenir demi;
+  font-size: 1.1rem;
+}
+.main__venue--detail {
+  font-family: Avenir regular;
+}
+.main__venue {
+  font-family: Avenir demi;
+  color: #afafaf;
+  font-size: 1rem;
+}
+@media (min-width: 768px) {
+  .main__venue {
+    display: none;
+  }
+}
+.main__location {
+  font-family: Avenir demi;
+  color: #afafaf;
+  font-size: 1rem;
+}
+@media (min-width: 768px) {
+  .main__location {
+    display: none;
+  }
+}
+.main__location--detail {
+  font-family: Avenir regular;
+}
+.main__button {
+  color: white;
+  background: #323232;
+  border: none;
+  border-radius: 4px;
+  width: 95%;
+  height: 100%;
+  font-family: Avenir demi;
+  font-size: 1.2rem;
+}
+@media (min-width: 768px) {
+  .main__button {
+    width: 100%;
+  }
+}
+.main__button-div {
+  height: 8vh;
+}
+@media (min-width: 768px) {
+  .main__button-div {
+    width: 20vw;
+  }
+}
+@media (min-width: 768px) {
+  .main__date-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+@media (min-width: 768px) {
+  .main__venue-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+@media (min-width: 768px) {
+  .main__location-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 .footer {
@@ -127,12 +285,16 @@
     margin-right: 5vw;
   }
 }
+.footer__apps {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 15vw;
+}
 @media (min-width: 768px) {
   .footer__social-media {
     display: flex;
-    height: auto;
-    justify-content: space-evenly;
-    text-align: start;
+    justify-content: flex-start;
+    width: 70%;
     padding-top: 10vh;
   }
 }
@@ -141,14 +303,27 @@
   font-family: Avenir demi;
 }
 @media (min-width: 768px) {
+  .footer__contact {
+    font-size: 2.5rem;
+  }
+}
+@media (min-width: 768px) {
   .footer__main {
     display: flex;
     justify-content: space-between;
+    height: 30vh;
   }
 }
 .footer__content {
   font-size: 1rem;
   font-family: Avenir regular;
+}
+@media (min-width: 768px) {
+  .footer__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
 }
 .footer__content--bold {
   font-size: 1rem;
@@ -164,13 +339,11 @@
     justify-content: space-evenly;
   }
 }
-.footer__bandname {
-  padding-top: 15vh;
-  padding-bottom: 3vh;
-}
 @media (min-width: 768px) {
   .footer__bandname {
+    width: 20%;
     padding: 0;
+    padding-bottom: 15vw;
   }
 }
 @media (min-width: 768px) {
