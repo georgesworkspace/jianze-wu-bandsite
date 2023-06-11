@@ -186,13 +186,146 @@
   }
 }
 
-.form__image {
-  width: 10%;
-  border-radius: 50%;
+main {
+  padding-left: 5vw;
 }
 
+.form {
+  display: flex;
+  padding-left: 5vw;
+  border-bottom: 1px solid #afafaf;
+  padding-bottom: 5vh;
+}
+@media (min-width: 1280px) {
+  .form {
+    margin: 0 12vw;
+  }
+}
+.form__image {
+  width: 10%;
+  height: 15%;
+  border-radius: 50%;
+}
+.form__username-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.form__username {
+  border-radius: 4px;
+  height: 5vh;
+  border: 1px solid #afafaf;
+  background-color: #E1E1E1;
+  color: BLACK;
+  display: flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.form__username::-moz-placeholder {
+  color: #323232;
+  text-align: 1% 1%;
+}
+.form__username::placeholder {
+  color: #323232;
+  text-align: 1% 1%;
+}
+.form__input-text {
+  border-radius: 4px;
+  height: 15vh;
+  border: 1px solid #afafaf;
+  background-color: #E1E1E1;
+  color: #323232;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.form__input-text::-moz-placeholder {
+  color: #323232;
+  text-align: left start;
+}
+.form__input-text::placeholder {
+  color: #323232;
+  text-align: left start;
+}
+.form__text-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.form__content {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  justify-content: space-between;
+}
+.form__title {
+  color: #323232;
+  font-family: Avenir demi;
+  font-size: 5vh;
+}
+@media (min-width: 1280px) {
+  .form__title {
+    margin-left: 5vw;
+  }
+}
+.form__name {
+  color: #afafaf;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 3vh;
+}
+.form__text {
+  color: #afafaf;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 5vh;
+}
+.form__button {
+  background-color: #323232;
+  color: white;
+  border: none;
+  height: 6vh;
+  border-radius: 4px;
+  width: 50%;
+}
+.form__button-box {
+  display: flex;
+  justify-content: end;
+}
+
+input {
+  text-align: left;
+  text-align: start;
+}
+
+.comment {
+  display: flex;
+  border-bottom: 1px solid #afafaf;
+  margin: 5vw;
+}
 .comment__image {
   width: 10%;
+  border-radius: 50%;
+  height: 12%;
+}
+.comment__title {
+  display: flex;
+  justify-content: space-around;
+}
+.comment__username {
+  color: #323232;
+  font-family: Avenir demi;
+}
+.comment__date {
+  color: #afafaf;
+  font-family: Avenir Demi;
+}
+.comment__text {
+  color: black;
+  font-family: Avenir regular;
 }
 
 .footer {

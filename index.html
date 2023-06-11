@@ -66,12 +66,23 @@
       <img class="gallery__image" src="./assets/Images/Photo-gallery-8.jpg" />
       <img class="gallery__image" src="./assets/Images/Photo-gallery-9.jpg" />
     </section>
-    <form>
-      <p class="form__title">Join the Conversation</p>
+    <p class="form__title">Join the Conversation</p>
+    <form class="form">
+
       <img class="form__image" src="./assets/Images/Mohan-muruge.jpg">
-      <label><input type="text" name="Name" placeholder="Enter your name">NAME</label>
-      <label><input type="text" name="Comment" placeholder="Add a new comment">Comment</label>
-      <button class="form__button">COMMENT</button>
+      <div class="form__content">
+        <div class="form__username-input">
+          <label class="form__name">Name<input type="text" name="Name" class="form__username"
+              placeholder="Enter your name"></label>
+        </div>
+        <div class="form__text-input">
+          <label class="form__text">Comment<input type="text" class="form__input-text" name="Comment"
+          placeholder="Add a new comment"></label>
+          <div class="form__button-box">
+          <button class="form__button">COMMENT</button>
+        </div>
+        </div>
+      </div>
     </form>
     <section class="comment-list">
 

@@ -97,7 +97,7 @@ function displaycomments(comment){
 
 //create div for the whole comment
 const Comment=document.createElement("div");
-comment.className=("comment");
+Comment.className=("comment");
 //create div for comment context
 const commentContent=document.createElement("div");
 commentContent.className=("comment__content");
@@ -118,7 +118,7 @@ commentDate.className=("comment__date");
 commentDate.innerText=(comment.date);
 //create and fill text for the text
 const commentText=document.createElement("p");
-commentText.className=("comment_text");
+commentText.className=("comment__text");
 commentText.innerText=(comment.comment);
 //append date and username to div title
 commentTitle.appendChild(commentName);
