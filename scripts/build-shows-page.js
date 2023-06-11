@@ -27,7 +27,7 @@ const performances=[
 
 ] 
 // select the parent class
-const parentclass=document.querySelector(".main");
+const parentclasshidden=document.querySelector(".main__title-hidden");
 //create a div for tablet and desktop, doesnot display in mobile;
 const hiddendiv=document.createElement("div");
 hiddendiv.className=("main__div--hidden");
@@ -43,7 +43,7 @@ hiddenlocation.innerText=("LOCATION");
 hiddendiv.appendChild(hiddendate);
 hiddendiv.appendChild(hiddenvenue);
 hiddendiv.appendChild(hiddenlocation);
-parentclass.appendChild(hiddendiv);
+parentclasshidden.appendChild(hiddendiv);
 performances.forEach((performance)=>{
     displayshow(performance)
 })

@@ -93,7 +93,22 @@
 //header section//
 .header {
   display: flex;
+  @include tablet{
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
  
+ &__soundtrack{
+  position:absolute;
+ 
+  height:20%;
+  margin-top: 23vh;
+  @include tablet{
+    margin-top:23vh;
+    width:60%;
+    padding-left:5vw;
+  }
+ }
  
  &__song{
   position: absolute;
@@ -104,8 +119,8 @@
     padding-left: 5vh;
     width:85%;
     @include tablet {
-      top: 45%;
-      right: 60%;
+      top: 20%;
+      right: 15%;
       font-size: 2.5rem;
 
  }
@@ -125,8 +140,9 @@
     padding-left: 5vh;
 
     @include tablet {
-      top: 45%;
+      top: 8%;
       right: 60%;
+      
       font-size: 2.5rem;
 
 
@@ -136,11 +152,16 @@
 .main{
   padding-top: 5vh;
   margin-left:4%;
+  
+  @include desktop{
+    margin:0 10vw 0 30vw;
+  }
   &__title{
 font-family: Avenir demi;
 color:black;
-padding-left:4vw;
+padding-left:0vw;
 font-size:2rem;
+
 
   }
   &__div--hidden{display:none;
@@ -148,7 +169,10 @@ font-size:2rem;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      width:65%
+      width:65%;
+      font-family:Avenir demi;
+   color:#afafaf;
+   font-size: 1rem;
     }
   }
   &__show-div{
@@ -163,7 +187,10 @@ font-size:2rem;
    height:10vh;
    justify-content: space-between;
   }
+  
+    
   }
+  
   &__date{
    font-family:Avenir demi;
    color:#afafaf;
