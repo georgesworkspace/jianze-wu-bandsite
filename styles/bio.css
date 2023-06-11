@@ -28,6 +28,11 @@
     padding: 0 2rem;
   }
 }
+@media (min-width: 1280px) {
+  .nav {
+    padding-left: 13vw;
+  }
+}
 .nav__list {
   width: 100%;
   display: flex;
@@ -123,6 +128,12 @@
 .description__picture {
   max-width: 100%;
 }
+@media (min-width: 1280px) {
+  .description__picture {
+    width: 90%;
+    padding-left: 7vw;
+  }
+}
 .description__main-content--demi {
   font-size: 0.9rem;
   line-height: 22px;
@@ -130,11 +141,26 @@
   font-family: Avenir demi;
   font-weight: 400;
 }
+@media (min-width: 1280px) {
+  .description__main-content--demi {
+    font-size: 1.3rem;
+    padding: 0 5vw;
+    width: 80%;
+  }
+}
 .description__main-content--title {
   font-size: 1.2rem;
   color: black;
   padding: 4vh 0;
   font-family: Avenir regular;
+}
+@media (min-width: 1280px) {
+  .description__main-content--title {
+    font-size: Avenir bold;
+    font-size: 2rem;
+    color: black;
+    padding: 4vh 5vw;
+  }
 }
 .description__main-content {
   font-family: Avenir regular;
@@ -147,6 +173,14 @@
   .description__main-content {
     padding: 0 2vw;
     display: flex;
+  }
+}
+@media (min-width: 1280px) {
+  .description__main-content {
+    line-height: 22px;
+    font-size: 1.3rem;
+    padding-bottom: 2vh;
+    margin: 0;
   }
 }
 
@@ -224,6 +258,11 @@ main {
   flex-direction: column;
   justify-content: space-between;
 }
+@media (min-width: 1280px) {
+  .form__username {
+    width: 70%;
+  }
+}
 .form__username::-moz-placeholder {
   color: #323232;
   text-align: 1% 1%;
@@ -241,6 +280,11 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+@media (min-width: 1280px) {
+  .form__input-text {
+    width: 70%;
+  }
 }
 .form__input-text::-moz-placeholder {
   color: #323232;
@@ -289,11 +333,26 @@ main {
   border: none;
   height: 6vh;
   border-radius: 4px;
-  width: 50%;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .form__button {
+    width: 30%;
+  }
+}
+@media (min-width: 1280px) {
+  .form__button {
+    width: 30%;
+  }
 }
 .form__button-box {
   display: flex;
   justify-content: end;
+}
+@media (min-width: 1280px) {
+  .form__button-box {
+    width: 70%;
+  }
 }
 
 input {
@@ -301,10 +360,21 @@ input {
   text-align: start;
 }
 
+@media (min-width: 1280px) {
+  .comment-list {
+    padding: 0 12vw;
+  }
+}
+
 .comment {
   display: flex;
   border-bottom: 1px solid #afafaf;
   margin: 5vw;
+}
+@media (min-width: 1280px) {
+  .comment {
+    width: 70%;
+  }
 }
 .comment__image {
   width: 10%;
@@ -367,12 +437,16 @@ input {
     margin-right: 5vw;
   }
 }
+.footer__apps {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 15vw;
+}
 @media (min-width: 768px) {
   .footer__social-media {
     display: flex;
-    height: auto;
-    justify-content: space-evenly;
-    text-align: start;
+    justify-content: flex-start;
+    width: 70%;
     padding-top: 10vh;
   }
 }
@@ -381,14 +455,27 @@ input {
   font-family: Avenir demi;
 }
 @media (min-width: 768px) {
+  .footer__contact {
+    font-size: 2.5rem;
+  }
+}
+@media (min-width: 768px) {
   .footer__main {
     display: flex;
     justify-content: space-between;
+    height: 30vh;
   }
 }
 .footer__content {
   font-size: 1rem;
   font-family: Avenir regular;
+}
+@media (min-width: 768px) {
+  .footer__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
 }
 .footer__content--bold {
   font-size: 1rem;
@@ -404,13 +491,11 @@ input {
     justify-content: space-evenly;
   }
 }
-.footer__bandname {
-  padding-top: 15vh;
-  padding-bottom: 3vh;
-}
 @media (min-width: 768px) {
   .footer__bandname {
+    width: 20%;
     padding: 0;
+    padding-bottom: 15vw;
   }
 }
 @media (min-width: 768px) {
