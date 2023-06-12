@@ -6,8 +6,9 @@
     @content;
   }
 }
-@mixin desktop{
-  @media(min-width:$desktop-break-point){
+
+@mixin desktop {
+  @media(min-width:$desktop-break-point) {
     @content;
   }
 }
@@ -31,9 +32,11 @@
     flex-direction: row;
     padding: 0 2rem;
   }
-  @include desktop{
-    padding-left:13vw;
+
+  @include desktop {
+    padding-left: 13vw;
   }
+
   &__list {
     width: 100%;
     display: flex;
@@ -47,6 +50,12 @@
       justify-content: initial;
       width: auto;
       padding-left: 3rem;
+    }
+
+    @include desktop {
+      padding: 0;
+      display: flex;
+      justify-content: center;
     }
   }
 
@@ -86,7 +95,13 @@
       flex: 0;
       margin-left: 5rem;
     }
+
+    @include desktop {
+      margin-left: 3rem;
+      font-size: 1rem;
+    }
   }
+
 }
 
 
@@ -136,9 +151,10 @@
 
   &__picture {
     max-width: 100%;
-    @include desktop{
-      width:90%;
-      padding-left:7vw;
+
+    @include desktop {
+      width: 90%;
+      padding-left: 7vw;
     }
   }
 
@@ -148,11 +164,12 @@
     color: #323232;
     font-family: Avenir demi;
     font-weight: 400;
-    @include desktop{
-      font-size:1.3rem;
-      padding:0 5vw;
-      width:80%;
-      
+
+    @include desktop {
+      font-size: 1.3rem;
+      padding: 0 5vw;
+      width: 80%;
+
     }
   }
 
@@ -161,11 +178,12 @@
     color: black;
     padding: 4vh 0;
     font-family: Avenir regular;
-    @include desktop{
-      font-size:Avenir bold;
+
+    @include desktop {
+      font-size: Avenir bold;
       font-size: 2rem;
-      color:black;
-      padding:4vh 5vw;
+      color: black;
+      padding: 4vh 5vw;
     }
   }
 
@@ -179,17 +197,21 @@
     @include tablet {
       padding: 0 2vw;
       display: flex;
+      line-height: 1.3rem;
     }
-    @include desktop{
+
+    @include desktop {
       line-height: 22px;
       font-size: 1.3rem;
-      padding-bottom:2vh;
-      margin:0;
+      padding-bottom: 2vh;
+      margin: 0;
+      line-height: 1.3rem;
     }
   }
 }
 
 .main-content {
+  line-height: 18px;
   @include tablet {
     display: flex;
     padding: 3vw 0;
@@ -227,177 +249,203 @@
 }
 
 //form section
-main{
-  padding-left:5vw;
+main {
+  padding-left: 5vw;
 }
+
 .form {
-  display:flex;
-  
-  padding-left:5vw;
+  display: flex;
+
+  padding-left: 5vw;
   border-bottom: 1px solid #afafaf;
-  padding-bottom:5vh;
-  @include desktop{
-  margin: 0 12vw;
+  padding-bottom: 5vh;
+
+  @include desktop {
+    margin: 0 12vw;
   }
 
-   
-  
+
+
   &__image {
     width: 10%;
-   height:15%;
+    height: 15%;
     border-radius: 50%;
   }
-  &__username-input{
 
-    display:flex;
+  &__username-input {
+
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
-  &__username{
-   border-radius:4px;
-   height:5vh;
-   border:1px solid #afafaf;
-   background-color:#E1E1E1;
-   color:BLACK;
-   display:flex;
-   display:flex;
-   flex-direction: column;
-   justify-content: space-between;
-   flex-direction: column;
-   justify-content: space-between;
-   @include desktop{
-    width:70%;
-   }
-   &::placeholder{
-    color:#323232;
-    text-align: 1% 1%
-   
-   }
-  }
-  &__input-text{
-    border-radius:4px;
-    height:15vh;
-   border:1px solid #afafaf;
-   background-color:#E1E1E1;
-   color:#323232;
-   display:flex;
-   flex-direction: column;
-   justify-content: space-between;
-   @include desktop{
-    width:70%
-   }
-   &::placeholder{
-    color:#323232;
-    text-align:left start;
-   }
-  }
 
-  
-  &__text-input{
-    display:flex;
+  &__username {
+    border-radius: 4px;
+    height: 5vh;
+    border: 1px solid #afafaf;
+    background-color: #E1E1E1;
+    color: BLACK;
+    display: flex;
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
-    
-  }
-  &__content{
-    display:flex;
     flex-direction: column;
-    width:85%;
     justify-content: space-between;
-   
+
+    @include desktop {
+      width: 70%;
+    }
+
+    &::placeholder {
+      color: #323232;
+      text-align: 1% 1%
+    }
+  }
+
+  &__input-text {
+    border-radius: 4px;
+    height: 15vh;
+    border: 1px solid #afafaf;
+    background-color: #E1E1E1;
+    color: #323232;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include desktop {
+      width: 70%
+    }
+
+    &::placeholder {
+      color: #323232;
+      text-align: left start;
+    }
+  }
+
+
+  &__text-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
 
   }
-  &__title{
-color:#323232;
-font-family: Avenir demi;
-font-size:5vh;
-@include desktop{
-  margin-left:5vw;
-}
-  }
-  &__name{
-    color:#afafaf;
-    display:flex;
+
+  &__content {
+    display: flex;
     flex-direction: column;
-    padding-bottom:3vh;
-    
+    width: 85%;
+    justify-content: space-between;
+
+
   }
-  &__text{
-    color:#afafaf;
-    display:flex;
+
+  &__title {
+    color: #323232;
+    font-family: Avenir demi;
+    font-size: 5vh;
+
+    @include desktop {
+      margin-left: 5vw;
+    }
+  }
+
+  &__name {
+    color: #afafaf;
+    display: flex;
     flex-direction: column;
-    padding-bottom:5vh;
-    
+    padding-bottom: 3vh;
+
   }
-  &__button{
+
+  &__text {
+    color: #afafaf;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 5vh;
+
+  }
+
+  &__button {
     background-color: #323232;
-    color:white;
-    border:none;
-    height:6vh;
-    border-radius:4px;
-    
-    width:100%;
-    @include tablet{
-      width:30%;
+    color: white;
+    border: none;
+    height: 6vh;
+    border-radius: 4px;
+
+    width: 100%;
+
+    @include tablet {
+      width: 30%;
     }
-    @include desktop{
-      width:30%;
+
+    @include desktop {
+      width: 30%;
     }
   }
-  &__button-box{
+
+  &__button-box {
     display: flex;
     justify-content: end;
-    @include desktop{
-      width:70%;
+
+    @include desktop {
+      width: 70%;
     }
-    
+
   }
 }
 
 
 
-input{
+input {
   text-align: left;
   text-align: start;
 }
+
 //comment section
-.comment-list{
-  @include desktop{
-    padding:0 12vw;
+.comment-list {
+  @include desktop {
+    padding: 0 12vw;
   }
-}
-.comment {
-  display:flex;
-  border-bottom: 1px solid #afafaf;
-  margin:5vw;
-  @include desktop{
-    width:70%;
-  }
-&__image{
-  width: 10%;
-  border-radius: 50%;
-  height:12%;
-}
-&__title{
-  display:flex;
-  justify-content: space-around;
-}
-&__username{
-color:#323232;
-font-family: Avenir demi;
-}
-&__date{
-color:#afafaf;
-font-family:Avenir Demi;
-}
-&__text{
-  color:black;
-  font-family: Avenir regular;
-}
 }
 
-  
+.comment {
+  display: flex;
+  border-bottom: 1px solid #afafaf;
+  margin: 5vw;
+
+  @include desktop {
+    width: 70%;
+  }
+
+  &__image {
+    width: 10%;
+    border-radius: 50%;
+    height: 12%;
+  }
+
+  &__title {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__username {
+    color: #323232;
+    font-family: Avenir demi;
+  }
+
+  &__date {
+    color: #afafaf;
+    font-family: Avenir Demi;
+  }
+
+  &__text {
+    color: black;
+    font-family: Avenir regular;
+  }
+}
+
+
 
 //footer section
 .footer {
@@ -438,18 +486,20 @@ font-family:Avenir Demi;
       margin-right: 5vw;
     }
   }
-  &__apps{
+
+  &__apps {
     display: flex;
-      justify-content: space-between;
-      padding-left:15vw;
-     
+    justify-content: space-between;
+    padding-left: 15vw;
+
   }
+
   &__social-media {
     @include tablet {
       display: flex;
-      
+
       justify-content: flex-start;
-     width:70%;
+      width: 70%;
       padding-top: 10vh;
     }
   }
@@ -458,7 +508,8 @@ font-family:Avenir Demi;
     font-size: 1.5rem;
 
     font-family: Avenir demi;
-    @include tablet{
+
+    @include tablet {
       font-size: 2.5rem;
     }
 
@@ -470,14 +521,15 @@ font-family:Avenir Demi;
     @include tablet {
       display: flex;
       justify-content: space-between;
-      height:30vh;
+      height: 30vh;
     }
   }
 
   &__content {
     font-size: 1rem;
     font-family: Avenir regular;
-    @include tablet{
+
+    @include tablet {
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
@@ -499,11 +551,11 @@ font-family:Avenir Demi;
   }
 
   &__bandname {
-    
+
     @include tablet {
-      width:20%;
-      padding:0;
-      
+      width: 20%;
+      padding: 0;
+
       padding-bottom: 15vw;
     }
   }
@@ -514,7 +566,7 @@ font-family:Avenir Demi;
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
-      
+
     }
   }
 

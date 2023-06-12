@@ -49,6 +49,13 @@
     padding-left: 3rem;
   }
 }
+@media (min-width: 1280px) {
+  .nav__list {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+}
 .nav__hyperlink {
   padding-top: 2vh;
   color: white;
@@ -83,6 +90,12 @@
   .nav__item {
     flex: 0;
     margin-left: 5rem;
+  }
+}
+@media (min-width: 1280px) {
+  .nav__item {
+    margin-left: 3rem;
+    font-size: 1rem;
   }
 }
 
@@ -173,6 +186,7 @@
   .description__main-content {
     padding: 0 2vw;
     display: flex;
+    line-height: 1.3rem;
   }
 }
 @media (min-width: 1280px) {
@@ -181,9 +195,13 @@
     font-size: 1.3rem;
     padding-bottom: 2vh;
     margin: 0;
+    line-height: 1.3rem;
   }
 }
 
+.main-content {
+  line-height: 18px;
+}
 @media (min-width: 768px) {
   .main-content {
     display: flex;
