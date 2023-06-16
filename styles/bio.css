@@ -16,6 +16,11 @@
   padding: 0;
 }
 
+a:link, a:visited {
+  color: #afafaf;
+  text-decoration: none;
+}
+
 .nav {
   display: flex;
   flex-direction: column;
@@ -99,8 +104,140 @@
   }
 }
 
+.footer {
+  background-color: #323232;
+  width: 100%;
+  color: white;
+  line-height: 18px;
+  padding-left: 5vw;
+}
+.footer__fb {
+  margin-right: 15vw;
+  height: 8vh;
+}
+@media (min-width: 768px) {
+  .footer__fb {
+    display: flex;
+    height: auto;
+    margin-right: 5vw;
+  }
+}
+.footer__ins {
+  margin-right: 15vw;
+  height: 8vh;
+}
+@media (min-width: 768px) {
+  .footer__ins {
+    display: flex;
+    height: auto;
+    margin-right: 5vw;
+  }
+}
+.footer__twi {
+  height: 8vh;
+}
+@media (min-width: 768px) {
+  .footer__twi {
+    display: flex;
+    height: auto;
+    margin-right: 5vw;
+  }
+}
+.footer__apps {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 15vw;
+}
+@media (min-width: 768px) {
+  .footer__social-media {
+    display: flex;
+    justify-content: flex-start;
+    width: 70%;
+    padding-top: 10vh;
+  }
+}
+.footer__contact {
+  font-size: 1.5rem;
+  font-family: Avenir demi;
+}
+@media (min-width: 768px) {
+  .footer__contact {
+    font-size: 2.5rem;
+  }
+}
+@media (min-width: 768px) {
+  .footer__main {
+    display: flex;
+    justify-content: space-between;
+    height: 30vh;
+  }
+}
+.footer__content {
+  font-size: 1rem;
+  font-family: Avenir regular;
+}
+@media (min-width: 768px) {
+  .footer__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+}
+.footer__content--bold {
+  font-size: 1rem;
+  font-family: Avenir demi;
+  font-weight: 600;
+  padding: 5vh 0;
+}
+@media (min-width: 768px) {
+  .footer__content--bold {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+}
+@media (min-width: 768px) {
+  .footer__bandname {
+    width: 20%;
+    padding: 0;
+    padding-bottom: 15vw;
+  }
+}
+@media (min-width: 768px) {
+  .footer__manage {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+}
+@media (min-width: 768px) {
+  .footer__booking {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+}
+@media (min-width: 768px) {
+  .footer__entertainment {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+}
+
+.copyright {
+  font-family: Avenir regular;
+  font-size: 0.9rem;
+  padding-bottom: 5vh;
+}
+
 .header {
   display: flex;
+  font-family: "Avenir demi";
 }
 .header__picture {
   width: 100%;
@@ -254,8 +391,8 @@ main {
   }
 }
 .form__image {
-  width: 10%;
-  height: 15%;
+  width: 5rem;
+  height: 5rem;
   border-radius: 50%;
 }
 .form__username-input {
@@ -395,13 +532,13 @@ input {
   }
 }
 .comment__image {
-  width: 10%;
+  width: 3rem;
   border-radius: 50%;
-  height: 12%;
+  height: 3rem;
 }
 .comment__title {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .comment__username {
   color: #323232;
@@ -415,134 +552,7 @@ input {
   color: black;
   font-family: Avenir regular;
 }
-
-.footer {
-  background-color: #323232;
-  width: 100%;
-  color: white;
-  line-height: 18px;
-  padding-left: 5vw;
-}
-.footer__fb {
-  margin-right: 15vw;
-  height: 8vh;
-}
-@media (min-width: 768px) {
-  .footer__fb {
-    display: flex;
-    height: auto;
-    margin-right: 5vw;
-  }
-}
-.footer__ins {
-  margin-right: 15vw;
-  height: 8vh;
-}
-@media (min-width: 768px) {
-  .footer__ins {
-    display: flex;
-    height: auto;
-    margin-right: 5vw;
-  }
-}
-.footer__twi {
-  height: 8vh;
-}
-@media (min-width: 768px) {
-  .footer__twi {
-    display: flex;
-    height: auto;
-    margin-right: 5vw;
-  }
-}
-.footer__apps {
-  display: flex;
-  justify-content: space-between;
-  padding-left: 15vw;
-}
-@media (min-width: 768px) {
-  .footer__social-media {
-    display: flex;
-    justify-content: flex-start;
-    width: 70%;
-    padding-top: 10vh;
-  }
-}
-.footer__contact {
-  font-size: 1.5rem;
-  font-family: Avenir demi;
-}
-@media (min-width: 768px) {
-  .footer__contact {
-    font-size: 2.5rem;
-  }
-}
-@media (min-width: 768px) {
-  .footer__main {
-    display: flex;
-    justify-content: space-between;
-    height: 30vh;
-  }
-}
-.footer__content {
-  font-size: 1rem;
-  font-family: Avenir regular;
-}
-@media (min-width: 768px) {
-  .footer__content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-  }
-}
-.footer__content--bold {
-  font-size: 1rem;
-  font-family: Avenir demi;
-  font-weight: 600;
-  padding: 5vh 0;
-}
-@media (min-width: 768px) {
-  .footer__content--bold {
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-  }
-}
-@media (min-width: 768px) {
-  .footer__bandname {
-    width: 20%;
-    padding: 0;
-    padding-bottom: 15vw;
-  }
-}
-@media (min-width: 768px) {
-  .footer__manage {
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-  }
-}
-@media (min-width: 768px) {
-  .footer__booking {
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-  }
-}
-@media (min-width: 768px) {
-  .footer__entertainment {
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-  }
-}
-
-.copyright {
-  font-family: Avenir regular;
-  font-size: 0.9rem;
-  padding-bottom: 5vh;
+.comment__content {
+  flex: 1;
+  padding: 0 2rem;
 }/*# sourceMappingURL=bio.css.map */

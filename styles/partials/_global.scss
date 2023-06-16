@@ -1,0 +1,247 @@
+@use "variables" as *;
+@use "typography" as *;
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  a:link, a:visited {
+    color: #afafaf;
+    text-decoration: none;
+  }
+  
+  
+  //navigation bar//
+  .nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #323232;
+  
+    @include tablet {
+      flex-direction: row;
+      padding: 0 2rem;
+    }
+  
+    @include desktop {
+      padding-left: 13vw;
+    }
+  
+    &__list {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      list-style-type: none;
+      background-color: #323232;
+      padding: 0;
+      margin: 0;
+  
+      @include tablet {
+        justify-content: initial;
+        width: auto;
+        padding-left: 3rem;
+      }
+  
+      @include desktop {
+        padding: 0;
+        display: flex;
+        justify-content: center;
+      }
+    }
+  
+    &__hyperlink {
+      padding-top: 2vh;
+      color: white;
+      width: 50%;
+  
+      @include tablet {
+        padding: 0;
+        width: 13rem;
+      }
+    }
+  
+    &__title {
+      width: 100%;
+      height: auto;
+    }
+  
+    &__item {
+      font-family: Avenir Regular;
+      font-weight: 400;
+      flex: 1;
+      text-align: center;
+      background-color: #323232;
+      padding: 2rem 0;
+      color: #afafaf;
+      font-size: 1.5rem;
+  
+      &--selected {
+        border-bottom: 0.2rem solid white;
+        color: white;
+        font-weight: 600;
+      }
+  
+      @include tablet {
+        flex: 0;
+        margin-left: 5rem;
+      }
+  
+      @include desktop {
+        margin-left: 3rem;
+        font-size: 1rem;
+      }
+    }
+  
+  }
+  
+  
+//footer section
+.footer {
+    background-color: #323232;
+    width: 100%;
+    color: white;
+    line-height: 18px;
+    padding-left: 5vw;
+  
+    &__fb {
+      margin-right: 15vw;
+      height: 8vh;
+  
+      @include tablet {
+        display: flex;
+        height: auto;
+        margin-right: 5vw;
+      }
+    }
+  
+    &__ins {
+      margin-right: 15vw;
+      height: 8vh;
+  
+      @include tablet {
+        display: flex;
+        height: auto;
+        margin-right: 5vw;
+      }
+    }
+  
+    &__twi {
+      height: 8vh;
+  
+      @include tablet {
+        display: flex;
+        height: auto;
+        margin-right: 5vw;
+      }
+    }
+  
+    &__apps {
+      display: flex;
+      justify-content: space-between;
+      padding-left: 15vw;
+  
+    }
+  
+    &__social-media {
+      @include tablet {
+        display: flex;
+  
+        justify-content: flex-start;
+        width: 70%;
+        padding-top: 10vh;
+      }
+    }
+  
+    &__contact {
+      font-size: 1.5rem;
+  
+      font-family: Avenir demi;
+  
+      @include tablet {
+        font-size: 2.5rem;
+      }
+  
+  
+  
+    }
+  
+    &__main {
+      @include tablet {
+        display: flex;
+        justify-content: space-between;
+        height: 30vh;
+      }
+    }
+  
+    &__content {
+      font-size: 1rem;
+      font-family: Avenir regular;
+  
+      @include tablet {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+      }
+    }
+  
+    &__content--bold {
+      font-size: 1rem;
+      font-family: Avenir demi;
+      font-weight: 600;
+      padding: 5vh 0;
+  
+      @include tablet {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+      }
+    }
+  
+    &__bandname {
+  
+      @include tablet {
+        width: 20%;
+        padding: 0;
+  
+        padding-bottom: 15vw;
+      }
+    }
+  
+    &__manage {
+      @include tablet {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+  
+      }
+    }
+  
+    &__booking {
+      @include tablet {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+      }
+    }
+  
+    &__entertainment {
+      @include tablet {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+      }
+    }
+  }
+  
+  .copyright {
+    font-family: Avenir regular;
+    font-size: 0.9rem;
+    padding-bottom: 5vh;
+  }
