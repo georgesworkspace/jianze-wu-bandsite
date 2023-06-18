@@ -115,11 +115,11 @@
     justify-content: space-evenly;
     height: 45vh;
     &:hover {
-      background-color: pink;
+      background-color: #fafafa;
     }
 
    &.clicked {
-      background-color: aqua;
+      background-color: #e1e1e1;
     }
 
     @include tablet {
@@ -141,16 +141,34 @@
   }
 
   &__date--detail {
-    font-family: Avenir demi;
+    font-family: "Avenir demi";
     font-size: 1.1rem;
+    @include desktop{ color:#323232;
+    }
   }
 
   &__venue--detail {
-    font-family: Avenir regular;
+    
+    font-size:1.3rem;
+    color:black;
+    font-family: "Avenir regular";
+    font-weight:500;
+    @include tablet{
+      
+      font-size:1.2rem;
+      
+    }
+    @include desktop{
+      font-size:1rem;
+      font-family: "Avenir regular";
+      color:#323232;
+    }
+    
+
   }
 
   &__venue {
-    font-family: Avenir demi;
+    font-family: "Avenir demi";
     color: #afafaf;
     font-size: 1rem;
 
@@ -170,7 +188,20 @@
   }
 
   &__location--detail {
-    font-family: Avenir regular;
+    color:black;
+    font-family: "Avenir regular";
+    font-weight:500;
+    @include tablet{
+      
+      font-size:1.2rem;
+      
+    }
+    @include desktop{
+      font-size:1rem;
+      font-family: "Avenir regular";
+      color:#323232;
+    }
+    
   }
 
   &__button {
@@ -193,7 +224,13 @@
 
     @include tablet {
       width: 20vw;
+      margin: 0.5rem;
+      margin-right:2rem;
     }
+    @include desktop{
+      width:15vw;
+    }
+
   }
 
   &__date-div {

@@ -12,6 +12,9 @@
   &__picture {
     width: 100%;
     filter: brightness(60%);
+    @include desktop{
+      height:auto;
+    }
   }
 
   &__text {
@@ -23,11 +26,16 @@
     padding-left: 5vh;
 
     @include tablet {
-      top: 45%;
-      right: 60%;
-      font-size: 2.5rem;
+      // top: 45%;
+      // right: 60%;
+      font-size: 5.5rem;
+      padding-top:22rem;
 
 
+    }
+    @include desktop{
+      padding-left:12rem;
+      font-size:4.5rem;
     }
   }
 }
@@ -39,14 +47,24 @@
   @include tablet {
     line-height: 22px;
   }
+  @include desktop{
+    width:1020px;
+    
+    margin:auto;
+  }
 
   &__title {
     margin: 0;
-    font-weight: 600;
+    
     font-size: 2rem;
     font-family: Avenir demi;
     font-weight: 400;
     color: #323232;
+    @include desktop{
+      font-size:3rem;
+      padding-bottom: 3rem;
+     margin-right:3rem;
+    }
   }
 
   &__picture {
@@ -54,20 +72,20 @@
 
     @include desktop {
       width: 90%;
-      padding-left: 7vw;
+      
     }
   }
 
   &__main-content--demi {
-    font-size: 0.9rem;
-    line-height: 22px;
+    font-size: 1.2rem;
+    line-height: 30px;
     color: #323232;
     font-family: Avenir demi;
     font-weight: 400;
 
     @include desktop {
       font-size: 1.3rem;
-      padding: 0 5vw;
+     
       width: 80%;
 
     }
@@ -77,35 +95,40 @@
     font-size: 1.2rem;
     color: black;
     padding: 4vh 0;
-    font-family: Avenir regular;
+    font-family:"Avenir demi";
+   @include tablet{
+    font-size: 2rem;
+    padding-left:2vw;
+   }
 
     @include desktop {
-      font-size: Avenir bold;
+      font-size: "Avenir bold";
       font-size: 2rem;
       color: black;
-      padding: 4vh 5vw;
+      padding: 4vh 0;
     }
   }
 
   &__main-content {
-    font-family: Avenir regular;
-    color: #323232;
-    font-size: 0.85rem;
-    line-height: 18px;
+    font-family: "Avenir regular";
+    color:#323232;
+    font-size: 1.1rem;
+    line-height: 25px;
     padding-bottom: 5vh;
 
     @include tablet {
-      padding: 0 2vw;
+      padding-right: 2vw;
       display: flex;
-      line-height: 1.3rem;
+      line-height: 25px;
+      font-size: 1.2rem;
     }
 
     @include desktop {
-      line-height: 22px;
+      line-height: 29px;
       font-size: 1.3rem;
       padding-bottom: 2vh;
       margin: 0;
-      line-height: 1.3rem;
+      
     }
   }
 }
@@ -116,6 +139,7 @@
     display: flex;
     padding: 3vw 0;
     line-height: 22px;
+    
   }
 }
 
@@ -125,6 +149,11 @@
 
   @include tablet {
     max-width: 100%;
+  }
+  @include desktop{
+    
+    
+    
   }
 
   &__title {
@@ -161,15 +190,22 @@ main {
   padding-bottom: 5vh;
 
   @include desktop {
-    margin: 0 12vw;
+    
+    width:1020px;
+    
+    margin:auto;
   }
 
 
 
   &__image {
-    width: 5rem;
-    height: 5rem;
+    width: 3rem;
+    height: 3rem;
     border-radius: 50%;
+    @include tablet{
+      width:5rem;
+      height:5rem;
+    }
   }
 
   &__username-input {
@@ -263,6 +299,8 @@ main {
     display: flex;
     flex-direction: column;
     padding-bottom: 5vh;
+    font-size:1rem;
+    font-family:"Avenir Next";
 
   }
 
@@ -305,7 +343,10 @@ input {
 //comment section
 .comment-list {
   @include desktop {
-    padding: 0 12vw;
+   
+    width:1020px;
+    
+    margin:auto;
   }
 }
 
@@ -322,6 +363,10 @@ input {
     width: 3rem;
     border-radius: 50%;
     height: 3rem;
+    @include tablet{
+      width:5rem;
+      height:5rem;
+    }
   }
 
   &__title {

@@ -1,13 +1,13 @@
 @font-face {
-  font-family: Avenir bold;
+  font-family: "Avenir bold";
   src: url(../assets/Font/AvenirNextLTPro-Bold.otf);
 }
 @font-face {
-  font-family: Avenir Demi;
+  font-family: "Avenir Demi";
   src: url(../assets/Font/AvenirNextLTPro-Demi.otf);
 }
 @font-face {
-  font-family: Avenir Regular;
+  font-family: "Avenir Regular";
   src: url(../assets/Font/AvenirNextLTPro-Regular.otf);
 }
 * {
@@ -106,41 +106,42 @@ a:link, a:visited {
 
 .footer {
   background-color: #323232;
-  width: 100%;
   color: white;
-  line-height: 18px;
+  margin-top: 5vw;
   padding-left: 5vw;
 }
+@media (min-width: 768px) {
+  .footer__title {
+    display: flex;
+  }
+}
 .footer__fb {
-  margin-right: 15vw;
-  height: 8vh;
+  margin-right: 10vw;
+  height: 4vh;
 }
 @media (min-width: 768px) {
   .footer__fb {
     display: flex;
-    height: auto;
     margin-right: 5vw;
   }
 }
 .footer__ins {
-  margin-right: 15vw;
-  height: 8vh;
+  margin-right: 10vw;
+  height: 4vh;
 }
 @media (min-width: 768px) {
   .footer__ins {
     display: flex;
-    height: auto;
     margin-right: 5vw;
   }
 }
 .footer__twi {
-  height: 8vh;
+  height: 4vh;
 }
 @media (min-width: 768px) {
   .footer__twi {
     display: flex;
-    height: auto;
-    margin-right: 5vw;
+    margin-right: 10vh;
   }
 }
 .footer__apps {
@@ -151,57 +152,80 @@ a:link, a:visited {
 @media (min-width: 768px) {
   .footer__social-media {
     display: flex;
-    justify-content: flex-start;
-    width: 70%;
-    padding-top: 10vh;
+    justify-content: space-between;
+    padding-top: 5vh;
   }
 }
 .footer__contact {
-  font-size: 1.5rem;
-  font-family: Avenir demi;
+  font-size: 2.5rem;
+  padding-top: 2rem;
+  font-family: "Avenir demi";
+  margin-bottom: 2rem;
 }
 @media (min-width: 768px) {
   .footer__contact {
     font-size: 2.5rem;
+    padding-right: 4rem;
   }
 }
 @media (min-width: 768px) {
   .footer__main {
     display: flex;
     justify-content: space-between;
-    height: 30vh;
   }
 }
 .footer__content {
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-family: Avenir regular;
 }
 @media (min-width: 768px) {
   .footer__content {
     display: flex;
     flex-direction: column;
+    font-size: 1rem;
     justify-content: space-evenly;
   }
 }
 .footer__content--bold {
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-family: Avenir demi;
   font-weight: 600;
-  padding: 5vh 0;
 }
 @media (min-width: 768px) {
   .footer__content--bold {
     padding: 0;
     display: flex;
+    font-size: 1rem;
     flex-direction: column;
     justify-content: space-evenly;
   }
 }
+.footer__group {
+  margin: 2rem 0;
+}
+@media (min-width: 768px) {
+  .footer__group {
+    margin: 0;
+    margin-bottom: 1.5rem;
+  }
+}
+.footer__bandname {
+  margin-top: 10vh;
+  color: white;
+  width: 50%;
+}
 @media (min-width: 768px) {
   .footer__bandname {
-    width: 20%;
-    padding: 0;
-    padding-bottom: 15vw;
+    display: none;
+  }
+}
+.footer__bandname--hidden {
+  display: none;
+}
+@media (min-width: 768px) {
+  .footer__bandname--hidden {
+    display: inline-block;
+    height: 30%;
   }
 }
 @media (min-width: 768px) {
@@ -231,8 +255,13 @@ a:link, a:visited {
 
 .copyright {
   font-family: Avenir regular;
-  font-size: 0.9rem;
-  padding-bottom: 5vh;
+  font-size: 1.2rem;
+  padding: 5vh 0;
+}
+@media (min-width: 768px) {
+  .copyright {
+    padding-top: 7vh;
+  }
 }
 
 .header {
@@ -341,10 +370,10 @@ a:link, a:visited {
   height: 45vh;
 }
 .main__show-div:hover {
-  background-color: pink;
+  background-color: #fafafa;
 }
 .main__show-div.clicked {
-  background-color: aqua;
+  background-color: #e1e1e1;
 }
 @media (min-width: 768px) {
   .main__show-div {
@@ -365,14 +394,34 @@ a:link, a:visited {
   }
 }
 .main__date--detail {
-  font-family: Avenir demi;
+  font-family: "Avenir demi";
   font-size: 1.1rem;
 }
+@media (min-width: 1280px) {
+  .main__date--detail {
+    color: #323232;
+  }
+}
 .main__venue--detail {
-  font-family: Avenir regular;
+  font-size: 1.3rem;
+  color: black;
+  font-family: "Avenir regular";
+  font-weight: 500;
+}
+@media (min-width: 768px) {
+  .main__venue--detail {
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 1280px) {
+  .main__venue--detail {
+    font-size: 1rem;
+    font-family: "Avenir regular";
+    color: #323232;
+  }
 }
 .main__venue {
-  font-family: Avenir demi;
+  font-family: "Avenir demi";
   color: #afafaf;
   font-size: 1rem;
 }
@@ -392,7 +441,21 @@ a:link, a:visited {
   }
 }
 .main__location--detail {
-  font-family: Avenir regular;
+  color: black;
+  font-family: "Avenir regular";
+  font-weight: 500;
+}
+@media (min-width: 768px) {
+  .main__location--detail {
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 1280px) {
+  .main__location--detail {
+    font-size: 1rem;
+    font-family: "Avenir regular";
+    color: #323232;
+  }
 }
 .main__button {
   color: white;
@@ -415,6 +478,13 @@ a:link, a:visited {
 @media (min-width: 768px) {
   .main__button-div {
     width: 20vw;
+    margin: 0.5rem;
+    margin-right: 2rem;
+  }
+}
+@media (min-width: 1280px) {
+  .main__button-div {
+    width: 15vw;
   }
 }
 @media (min-width: 768px) {

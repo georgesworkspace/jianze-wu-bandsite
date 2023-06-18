@@ -57,6 +57,7 @@ function getshow() {
       console.log(response);
       const performances = response.data;
       performances.forEach((performance) => {
+        performance.date=gettodaydate(performance.date)
         displayshow(performance);
       });
     })
@@ -122,7 +123,7 @@ function displayshow(performance) {
 
   const Datedetail = document.createElement("p");
   Datedetail.className = "main__date--detail";
-  Datedetail.innerText = performance.DATE;
+  Datedetail.innerText = performance.date;
   //append p tag to  date div
   datedivclass.appendChild(Date);
   datedivclass.appendChild(Datedetail);
@@ -139,7 +140,7 @@ function displayshow(performance) {
   //venue detail
   const Venuedetail = document.createElement("p");
   Venuedetail.className = "main__venue--detail";
-  Venuedetail.innerText = performance.VENUE;
+  Venuedetail.innerText = performance.place;
   //append p tag to div
   venuedivclass.appendChild(Venue);
   venuedivclass.appendChild(Venuedetail);
@@ -156,7 +157,7 @@ function displayshow(performance) {
   //location detail
   const Locationdetail = document.createElement("p");
   Locationdetail.className = "main__location--detail";
-  Locationdetail.innerText = performance.LOCATION;
+  Locationdetail.innerText = performance.location;
   //append location to locationdiv
   locationdivclass.appendChild(Location);
   locationdivclass.appendChild(Locationdetail);
@@ -175,4 +176,29 @@ function displayshow(performance) {
   //append to main
   parentclass.appendChild(showDivClass);
 }
+//convert timestamp to date
+function gettodaydate(today) {
+  exactdate = new Date(today);
+  let monthlist=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sept","Oct","Nov","Dec"];
+  let weekdaylist=["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];
+  let date = String(exactdate.getDate());
+  let month = monthlist[exactdate.getMonth()];
+  let weekday=weekdaylist[exactdate.getDay()];
+  let year = String(exactdate.getFullYear());
+  let dayzero = "";
+  let monthzero = "";
+ 
+  if (Number(date) < 10) {
+    dayzero = "0";
+  }
+  if (Number(date) < 10 && Number(month) < 10) {
+    dayzero = "0";
+    monthzero = "0";
+  }
+  if (Number(month) < 10) {
+    monthzero = "0";
+  }
+  exactdate = `${weekday} ${monthzero}${month} ${dayzero}${date} ${year}`;
 
+  return exactdate;
+}
