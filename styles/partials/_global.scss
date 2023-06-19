@@ -20,6 +20,7 @@
     flex-direction: column;
     align-items: center;
     background-color: #323232;
+   
   
     @include tablet {
       flex-direction: row;
@@ -39,7 +40,7 @@
       background-color: #323232;
       padding: 0;
       margin: 0;
-  
+    
       @include tablet {
         justify-content: initial;
         width: auto;
@@ -68,6 +69,11 @@
       width: 100%;
       height: auto;
     }
+    &__link{
+      &:hover{
+        border-bottom: 0.2rem solid white;
+      }
+    }
   
     &__item {
       font-family: Avenir Regular;
@@ -78,11 +84,18 @@
       padding: 2rem 0;
       color: #afafaf;
       font-size: 1.5rem;
-  
+      &:hover{
+        border-bottom: 0.2rem solid white;
+      }
+     
       &--selected {
         border-bottom: 0.2rem solid white;
         color: white;
         font-weight: 600;
+        &:hover{
+          border-bottom: 0.2rem solid white;
+        }
+        
       }
   
       @include tablet {
